@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+/* Light Cyan: hsl(193, 38%, 86%)
+- Neon Green: hsl(150, 100%, 66%)
+
+### Neutral
+
+- Grayish Blue: hsl(217, 19%, 38%)
+- Dark Grayish Blue: hsl(217, 19%, 24%)
+- Dark Blue: hsl(218, 23%, 16%)
+
+Font size (quote): 28px
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Manrope;
+}
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.advice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.advice-container div {
+  background-color: var(--dark-grayish-blue);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.advice-container div h3 {
+  color: var(--neon-green);
+  font-size: 0.8rem;
+  letter-spacing: 1.6px;
+  margin: 1rem;
+}
+
+.advice-container div h1 {
+  font-size: 1.75rem;
+  margin: 0.8rem;
+  color: var(--light-cyan);
+}
+
+.pattern-divider {
+  margin-bottom: 2rem;
+}
+
+.dice-btn {
+  position: absolute;
+  bottom: -10%;
+  right: 43%;
+  height: 3.4rem;
+  width: 3.4rem;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--neon-green);
+}
+
+@media screen and (min-width: 480px) {
+  .dice-btn {
+    height: 3rem;
+    width: 3rem;
+    right: 45%;
+  }
+}
+
+.dice-btn:hover,
+.dice-btn.focus,
+.dice-btn:active {
+  box-shadow: 0px 0px 20px var(--neon-green);
+  scale: 1.1;
+  transition: 1.5s;
+  outline: var(--dark-grayish-blue)
+}
+
+.rotate-dice{
+  rotate: -90deg;
+  transition: 1s;
+}
